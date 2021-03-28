@@ -1,14 +1,20 @@
 <template lang="">
   <div>
-    {{message}}
+    {{count}}
   </div>
-  <span :title='message'>blalala</span>
+  <button @click="count++">Add</button>
+  <button @click="addCount">Add count</button>
 </template>
 <script>
 export default {
   data() {
     return {
-      message: 'Hello World'
+      count: 0
+    }
+  },
+  methods: {
+    addCount(){
+      this.count+=2;
     }
   },
 }
