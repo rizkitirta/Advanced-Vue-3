@@ -1,15 +1,27 @@
 <template lang="">
-<div v-html="message"> </div>
+<div> {{ total }} </div>
+    <input v-model="num1" />
+    <input v-model="num2" />
 </template>
-
 <script>
 export default {
     data() {
         return {
-            message: "<h1 style='color:blue;'>blue</h1>",
-        };
+            num1:0,
+            num2:0
+        }
     },
-};
-</script>
+    computed:{
+        total(){
+            if(this.num1 > this.num2){
+                return 'Input Pertama Lebih Besar'      
+            }
 
-<style lang=""></style>
+            return 'Inputan Kedua Lebih Besar'
+        }
+    }
+}
+</script>
+<style lang="">
+    
+</style>
