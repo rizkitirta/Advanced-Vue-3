@@ -1,19 +1,15 @@
 <template lang="">
-    <div v-once>
-        {{ message }}
-    </div>
-
-    <button @click="message = 'Hello world'">update</button>
+<div v-html="message"> </div>
 </template>
+
 <script>
 export default {
     data() {
         return {
-            message: 'Hi bro!'
-        }
+            message: "<h1 style='color:blue;'>blue</h1>",
+        };
     },
-}
+};
 </script>
-<style lang="">
-    
-</style>
+
+<style lang=""></style>
