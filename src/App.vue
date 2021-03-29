@@ -1,19 +1,40 @@
 <template lang="">
-<div> Ini Adalah Parent Component </div>
-<child-component v-for="todo in
-  todos" :key="todo" :text="todo" />
+<div id="lifecycle"> {{ message }} </div>
 </template>
 
 <script>
 import childComponent from "./components/childComponent.vue";
 export default {
-    components: {
-        childComponent,
-    },
     data() {
         return {
-            todos: ["pertama", "kedua", "ketiga"],
-        };
+            message: 'Hello world'
+        }
+    },
+    beforeCreate() {
+        console.log('before crated');
+        console.log(this.message);
+        console.log(document.getELementById('lifecycle'));
+    },
+    created() {
+        console.log('created')
+    },
+    beforeMount() {
+        console.log('before mount')
+    },
+    mounted() {
+        console.log('mounted')
+    },
+    beforeUpdate() {
+        console.log('before update')
+    },
+    updated() {
+        console.log('updated')
+    },
+    onBeforeUnmount() {
+        console.log('before destroy')
+    },
+    unmounted() {
+        console.log('before destroyed')
     },
 };
 </script>
