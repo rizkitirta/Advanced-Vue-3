@@ -1,5 +1,4 @@
 <template lang="">
-<div> Ini Adalah Child Component </div>
 <div> {{ text }} </div>
 </template>
 
