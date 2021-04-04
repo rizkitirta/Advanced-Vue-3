@@ -1,13 +1,17 @@
 <template lang="">
-<div> {{ text }} </div>
+<div> <span>Ini adalah child component</span> <button @click="onPress">Click
+        Dari Child</button> </div>
 </template>
 
 <script>
 export default {
-    props: {
-        text: {
-            type: String,
-            default: "",
+    emits: ["child-click"],
+    methods: {
+        onClick() {
+            console.log('click saya');
+        },
+        onPress(value) {
+            this.$emit("child-click", "value");
         },
     },
 };
