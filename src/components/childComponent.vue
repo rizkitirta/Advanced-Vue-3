@@ -1,10 +1,20 @@
 <template lang="">
-<input :value="modelValue" @input="$emit('update:modelValue', $event.target.value)"/>
+<input v-model="value" />
 </template>
 
 <script>
 export default {
-   props: ["modelValue"]
+   props: ["modelValue"],
+   computed: {
+       value: {
+           get() {
+               return this.modelValue;
+           },
+           set(value) {
+               this.$emit('update:modelValue', value);
+           }
+       }
+   }
 };
 </script>
 
