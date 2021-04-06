@@ -1,7 +1,7 @@
 <template lang="">
-<div>{{message}}</div>
-<br>
-<child v-model="message"/>
+<child>
+<span>Sisipan</span>
+</child>
 </template> 
 
 <script>
