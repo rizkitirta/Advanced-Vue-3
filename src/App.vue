@@ -1,13 +1,9 @@
 <template lang="">
-<child-component />
+<child-component :message="'0'" :number="12"/>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            message: ""
-        }
-    }
+    
 };
 </script>
