@@ -1,24 +1,20 @@
 <template lang="">
-<div>Header</div>
-<slot />
+<div>Title</div>
+<slot :data="title"/>
 <div>Content</div>
-<slot name="slot2"/>
+<slot name="slot2" :data="content"/>
 <div>Footer</div>
-<slot name="slot3"/>
+<slot name="slot3" :data="footer"/>
 </template>
 
 <script>
 export default {
-    props: ["modelValue"],
-    computed: {
-        value: {
-            get() {
-                return this.modelValue;
-            },
-            set(value) {
-                this.$emit("update:modelValue", value);
-            },
-        },
+    data() {
+        return {
+            title: 'Ini Adalah title',
+            content: 'Ini Adalah Content',
+            footer: 'Ini Adalah Footer'
+        }
     },
 };
 </script>
