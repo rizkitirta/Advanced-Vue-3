@@ -1,9 +1,20 @@
 <template lang="">
-<child-component :message="'0'" :number="12"/>
+<satu/>
 </template>
 
 <script>
+import Satu from "./components/ComponentSatu.vue";
 export default {
-    
+    components: {Satu},
+    data() {
+        return {
+            author: 'Rizki Tirta'
+        }
+    },
+    provide(){
+        return {
+            providedAuthor : this.author
+        }
+    }
 };
 </script>
