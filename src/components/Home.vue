@@ -1,10 +1,9 @@
-<template lang="">
-<div class="demo-tab">Ini Adalah Component Home</div>
+<template>
+    <div>Ini Adalah Component Home</div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang=""></style>
