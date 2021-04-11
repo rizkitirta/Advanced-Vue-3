@@ -1,11 +1,10 @@
 <template lang="">
-<Tiga/>
+<div class="demo-tab">Ini Adalah Component About</div>
+
 </template>
 
 <script>
-import Tiga from "./ComponentTiga.vue";
 export default {
-   components: {Tiga}
 };
 </script>
 

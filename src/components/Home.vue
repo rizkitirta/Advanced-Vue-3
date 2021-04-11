@@ -1,11 +1,9 @@
 <template lang="">
-<dua/>
+<div class="demo-tab">Ini Adalah Component Home</div>
 </template>
 
 <script>
-import Dua from "./ComponentDua.vue";
 export default {
-   components: {Dua}
 };
 </script>
 
